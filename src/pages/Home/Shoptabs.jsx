@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const Shoptabs = () => {
+    
+    
     return (
         <div className='mt-10'>
             <h1 className="text-5xl text-center mb-10">Buy Your Toy</h1>
