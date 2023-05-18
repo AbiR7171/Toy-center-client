@@ -23,7 +23,11 @@ const Header = () => {
     <ul className="menu menu-horizontal px-1">
       <li><Link to="/">Home</Link></li>
       {
-        user ? <li><button onClick={handleLogOut}>Logout</button></li> :
+        user ? <div className='flex items-center space-x-4'>
+          <li><button onClick={handleLogOut}>Logout</button></li>
+          <li><Link to="/showall">Show All Toys</Link></li>
+          <li><Link to="/addtoy">Add A Toy</Link></li>
+        </div> :
         <li><Link to="/login">Login</Link></li>
       }
     </ul>
