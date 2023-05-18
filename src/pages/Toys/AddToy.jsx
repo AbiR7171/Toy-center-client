@@ -19,6 +19,32 @@ const AddToy = () => {
 
 
         console.log(imageUrl, toyName, name, email, category, price, rating, quantity, description);
+
+        const toys ={
+            imageUrl,
+            toyName,
+            name,
+            email,
+            category,
+            price,
+            rating,
+            quantity,
+            description
+        }
+
+        fetch("http://localhost:5000/toys",{
+            method:"POST",
+            headers:{
+                "content-type": "application/json"
+            },
+            body:JSON.stringify(toys)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+        })
+
+
     }
     return (
         <div>
