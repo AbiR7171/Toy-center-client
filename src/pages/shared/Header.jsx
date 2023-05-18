@@ -5,8 +5,8 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Header = () => {
   const {user, handleLogOut}= useContext(AuthContext)
     return (
-        <div className='container mx-auto'>
-            <div className="navbar bg-black text-white rounded-lg bg-opacity-85 p-4">
+        <div className=' bg-gradient-to-r from-pink-300 to-teal-400'>
+            <div className="navbar container mx-auto  text-white rounded-lg bg-opacity-85 p-4">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,6 +27,7 @@ const Header = () => {
           <li><button onClick={handleLogOut}>Logout</button></li>
           <li><Link to="/showall">Show All Toys</Link></li>
           <li><Link to="/addtoy">Add A Toy</Link></li>
+          <li><Link to="/mytoys">My Toys</Link></li>
         </div> :
         <li><Link to="/login">Login</Link></li>
       }

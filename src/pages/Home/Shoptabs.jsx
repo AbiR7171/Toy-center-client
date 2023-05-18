@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Shoptabs = () => {
     
-    
     return (
-        <div className='mt-10'>
+        <div className='mt-10 container mx-auto'>
             <h1 className="text-5xl text-center mb-10">Buy Your Toy</h1>
            <div>
            <Tabs>
