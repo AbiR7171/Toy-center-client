@@ -19,10 +19,12 @@ const ShowAll = () => {
     {/* head */}
     <thead>
       <tr>
+        <th>Seller</th>
+        <th>Toy Name</th>
+        <th>Category</th>
+        <th>Available Quantity</th>
+        <th>Price</th>
         <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
       </tr>
     </thead>
     <tbody>
