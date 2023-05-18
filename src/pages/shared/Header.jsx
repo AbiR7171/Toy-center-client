@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
-  
+  const {user, handleLogOut}= useContext(AuthContext)
     return (
         <div className='container mx-auto'>
             <div className="navbar bg-black text-white rounded-lg bg-opacity-85 p-4">
@@ -22,11 +22,20 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/login">Login</Link></li>
+      {
+        user ? <li><button onClick={handleLogOut}>Logout</button></li> :
+        <li><Link to="/login">Login</Link></li>
+      }
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Get started</a>
+    {
+      user?.photoURL && <div className="avatar">
+      <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <img title={user?.displayName} src={user.photoURL}/>
+      </div>
+    </div>
+    }
   </div>
 </div>
         </div>
