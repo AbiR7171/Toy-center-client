@@ -33,7 +33,8 @@ const route=createBrowserRouter([
             },
             {
                 path:"/showall",
-                element:<ShowAll/>
+                element:<ShowAll/>,
+                loader:()=> fetch("https://toy-center-server.vercel.app/toys")
             },
             {
                 path:"/mytoys",
@@ -41,7 +42,8 @@ const route=createBrowserRouter([
             },
             {
                 path:"/toy/:id",
-                element:<SingleToyDeatiels/>
+                element:<SingleToyDeatiels/>,
+                loader:({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
             }
         ]
     }

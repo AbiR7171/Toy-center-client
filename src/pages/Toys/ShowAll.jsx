@@ -1,19 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AllToysRow from './AllToysRow';
+import { useLoaderData } from 'react-router-dom';
 
 const ShowAll = () => {
-    const[toys, setToys]=useState([]);
+
+    const toyes = useLoaderData();
+    const[toys, setToys]=useState(toyes);
     
-    useEffect(()=>{
-      
-      fetch("https://toy-center-server.vercel.app/toys")
-      .then(res => res.json())
-      .then(data => setToys(data));
-    },[])   
+
+    const searchText = event =>{
+ 
+      event.preventDefault()
+     const search = event.target.search.value;
+     console.log(search);
+
+     const   url = `http://localhost:5000/toyes?toyName=${search}`
+     fetch(url)
+     .then(res => res.json())
+     .then(data =>{
+      console.log(data);
+      setToys(data)
+     })
+    }
     
-   
+
     return (
         <div className='container mx-auto mt-10'>
+            <form onSubmit={searchText}  className='w-1/2 mx-auto mb-10 flex gap-3'>
+            <input
+              
+              name="search"
+              type="text"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Search your Toy"
+             
+            />
+            <button
+            type="submit"
+            className="w-1/3 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition-colors duration-300"
+          >
+            Register
+          </button>
+          </form>
              <div className="overflow-x-auto">
   <table className="table w-full">
     {/* head */}
