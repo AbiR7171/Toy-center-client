@@ -8,6 +8,7 @@ import ShowAll from "../pages/Toys/ShowAll";
 import PrivateRoute from "./PrivateRoute";
 import MyToys from "../pages/Toys/MyToys";
 import SingleToyDeatiels from "../pages/Toys/SingleToyDeatiels";
+import UpdateMyToyes from "../pages/Toys/UpdateMyToyes";
 
 
 const route=createBrowserRouter([
@@ -33,16 +34,21 @@ const route=createBrowserRouter([
             },
             {
                 path:"/showall",
-                element:<ShowAll/>,
+                element:<PrivateRoute><ShowAll/></PrivateRoute>,
                 loader:()=> fetch("https://toy-center-server.vercel.app/toys")
             },
             {
                 path:"/mytoys",
-                element:<MyToys/>
+                element:<PrivateRoute><MyToys/></PrivateRoute>
             },
             {
                 path:"/toy/:id",
                 element:<SingleToyDeatiels/>,
+                loader:({params})=> fetch(`https://toy-center-server.vercel.app/toys/${params.id}`)
+            },
+            {
+                path:"/updateMyToes/:id",
+                element:<PrivateRoute><UpdateMyToyes/></PrivateRoute>,
                 loader:({params})=> fetch(`https://toy-center-server.vercel.app/toys/${params.id}`)
             }
         ]
