@@ -6,7 +6,7 @@ const ShowAll = () => {
 
     const toyes = useLoaderData();
     const[toys, setToys]=useState(toyes);
-    
+    const[show, setShow]=useState(false);
 
     const searchText = event =>{
  
@@ -57,14 +57,19 @@ const ShowAll = () => {
     <tbody>
       {/* row 1 */}
       {
-       toys.length > 20 ? toys.slice(0, 20) : toys.map(toy => <AllToysRow
+       
+       show ? toys.slice(0, 20) : toys.map(toy => <AllToysRow
         key={toy._id}
         toy={toy}
+      
         />)
       }
     </tbody>
   </table>
 </div>
+          <div className='flex justify-center items-center'>
+            <button onClick={()=> setShow(true)} className='bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-md shadow-lg text-white mb-10'>ShowAll</button>
+          </div>
         </div>
     );
 };
