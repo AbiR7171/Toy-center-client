@@ -17,9 +17,19 @@ const MyToys = () => {
                 setMyToys(data);
             })
     },[])
+      
+    const sortByPrice = ()=>{
+      fetch(`http://localhost:5000/mytoyesort?email=${user?.email}`)
+      .then(res => res.json())
+      .then(data =>{
+        setMyToys(data);
+      })
+    }
     return (
         <div className='container mx-auto mt-10'>
-         
+         <div className='flex justify-end font-bold'>
+         <button onClick={sortByPrice}  className='bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-lg mt-4 mb-5 '>Sort by Price</button>
+         </div>
          <div className="overflow-x-auto w-full">
   <table className="table w-full">
     {/* head */}

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useActionData } from 'react-router-dom';
+import sortBy from 'sort-by';
 
 const MyToysRow = ({myToy, myToys, setMyToys}) => {
   console.log(myToy);
@@ -20,7 +21,6 @@ const MyToysRow = ({myToy, myToys, setMyToys}) => {
         }
       })
    }
-
     return (
       <tr>
       <th>
@@ -47,6 +47,7 @@ const MyToysRow = ({myToy, myToys, setMyToys}) => {
         <Link to={`/updateMyToes/${_id}`}><button className='bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-lg'>Update</button></Link>
       </th>
     </tr>
+    
     );
 };
 
