@@ -12,9 +12,8 @@ const ShowAll = () => {
  
       event.preventDefault()
      const search = event.target.search.value;
-     console.log(search);
 
-     const   url = `http://localhost:5000/toyes?toyName=${search}`
+     const   url = `https://toy-center-server.vercel.app/toyes?toyName=${search}`
      fetch(url)
      .then(res => res.json())
      .then(data =>{
