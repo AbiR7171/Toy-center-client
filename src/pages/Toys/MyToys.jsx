@@ -19,10 +19,10 @@ const MyToys = () => {
     },[])
       
     const sortByPrice = ()=>{
-      fetch(`http://localhost:5000/mytoyesort?email=${user?.email}`)
+      fetch(`https://toy-center-server.vercel.app/mytoyesort?email=${user?.email}`)
       .then(res => res.json())
       .then(data =>{
-        setMyToys(data);
+        setMyToys(data)
       })
     }
     return (

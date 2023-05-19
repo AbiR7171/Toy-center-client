@@ -57,7 +57,7 @@ const ShowAll = () => {
     <tbody>
       {/* row 1 */}
       {
-        toys.map(toy => <AllToysRow
+       toys.length > 20 ? toys.slice(0, 20) : toys.map(toy => <AllToysRow
         key={toy._id}
         toy={toy}
         />)
