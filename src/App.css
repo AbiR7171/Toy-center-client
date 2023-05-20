@@ -1,3 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Hind&family=Satisfy&family=Smokum&display=swap');
+
+
 body{
     font-family: serif;
+}
+
+.font-Dancing{
+    font-family: 'Dancing Script', cursive;
+}
+.font-Hind{
+    font-family: 'Hind', sans-serif;
+}
+.font-Smo{
+    font-family: 'Smokum', cursive;
+}
+.font-Sat{
+    font-family: 'Satisfy', cursive;
 }
