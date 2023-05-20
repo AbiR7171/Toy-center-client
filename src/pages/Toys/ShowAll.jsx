@@ -55,20 +55,26 @@ const ShowAll = () => {
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
-      {
-       
-       show ? toys.slice(0, 20) : toys.map(toy => <AllToysRow
+  
+      {   
+       show || toys.slice(0,20).map(toy => <AllToysRow
         key={toy._id}
         toy={toy}
       
         />)
       }
+      {
+        show && toys.map(toy => <AllToysRow
+          key={toy._id}
+          toy={toy}
+        
+        ></AllToysRow>)
+      }
     </tbody>
   </table>
 </div>
           <div className='flex justify-center items-center'>
-            <button onClick={()=> setShow(true)} className='bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-md shadow-lg text-white mb-10'>ShowAll</button>
+            <button onClick={()=> setShow(!show)} className='bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-md shadow-lg text-white mb-10'>{!show ? "show All" : "Show less"}</button>
           </div>
         </div>
     );
