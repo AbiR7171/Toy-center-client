@@ -56,7 +56,7 @@ const AddToy = () => {
 
     }
     return (
-        <div>
+        <div className='container mx-auto'>
             <h1 className="text-4xl text-center mt-10 mb-10">Add Your Toy </h1>
             <div>
             <form onSubmit={handleAddToyFrom} className="bg-white rounded-lg shadow-lg  p-4" >

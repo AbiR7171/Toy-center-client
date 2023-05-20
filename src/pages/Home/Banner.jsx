@@ -12,8 +12,8 @@ const Banner = () => {
                 <p className='text-2xl font-Sat'>Here You can Buy and Sell your Toy</p>
                </div>
             </div>
-            <div>
-            <Lottie animationData={robot} loop={true} />
+            <div >
+            <Lottie  animationData={robot} loop={true} />
             </div>
         </div>
     );
