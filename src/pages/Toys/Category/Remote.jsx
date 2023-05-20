@@ -5,8 +5,8 @@ const Remote = ({remote}) => {
     const {imageUrl,toyName,name,email,category,price,quantity, rating , _id }= remote;
     return (
         <div >
-             <div className="card w-96 h-3/4 bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-xl font-serif">
-  <figure><img src={imageUrl} className='rounded' alt="Shoes" /></figure>
+             <div className="card w-96  bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-xl font-serif">
+  <figure><img src={imageUrl} className='rounded h-80 w-full' alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
       {toyName}

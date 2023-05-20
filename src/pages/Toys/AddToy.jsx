@@ -110,7 +110,7 @@ const AddToy = () => {
           Price
         </label>
         <input
-          type="text"
+          type="number"
           name="price"
           className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
         />
