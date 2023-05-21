@@ -35,7 +35,7 @@ const UpdateMyToyes = () => {
             description
         }
 
-         fetch(`https://toy-center-server.vercel.app/toys/${_id}`,{
+         fetch(`https://toy-center-server.vercel.app/toy/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type": "application/json"
@@ -50,7 +50,7 @@ const UpdateMyToyes = () => {
     }
     return (
         <div className='container mx-auto'>
-            <h1 className="text-4xl text-center mt-10 mb-10">Add Your Toy </h1>
+            <h1 className="text-4xl text-center mt-10 mb-10">Update your Toy </h1>
             <div>
             <form onSubmit={handleUpdateFrom} className="bg-white rounded-lg shadow-lg  p-4" >
  <div className='grid grid-cols-2 gap-2'>

@@ -34,7 +34,7 @@ const Shoptabs = () => {
   },[toys])
     
     return (
-        <div className='mt-10 container mx-auto'>
+        <div className='mt-10 container mx-auto  p-2 mx-auto'>
             <h1 className="text-5xl text-center mb-10">Buy Your Toy</h1>
            <div className='font-serif'>
            <Tabs>
@@ -45,7 +45,7 @@ const Shoptabs = () => {
     </TabList>
 
     <TabPanel>
-     <div className='grid grid-cols-3 gap-2'>
+     <div className='grid lg:grid-cols-3 gap-2   p-2 mx-auto'>
      {
         turbos.map(turbo =><Turbo
         key={turbo._id}
@@ -55,7 +55,7 @@ const Shoptabs = () => {
      </div>
     </TabPanel>
     <TabPanel>
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid lg:grid-cols-3 gap-2 p-2 mx-auto'>
       {
         remotes.map(remote => <Remote
         key={remote._id}
@@ -65,7 +65,7 @@ const Shoptabs = () => {
       </div>
     </TabPanel>
     <TabPanel>
-        <div className='grid grid-cols-3 gap-2'>
+        <div className='grid lg:grid-cols-3 gap-2'>
           {
             sirgils.map(sirgil => <Sirgil
             key={sirgil._id}

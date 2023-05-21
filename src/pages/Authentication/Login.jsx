@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import UseTitle from '../../Extra/UseTitle';
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const {handleLogin, handleLoginWithGoogle}=useContext(AuthContext);
 
     const location = useLocation()
     const navigate = useNavigate()
-
-    const froms = location.state?.from?.pathname || "/";
+    console.log(location);
+     UseTitle("Login")
+    const From = location.state?.from?.pathname || "/";
 
 
     const handleLoginFrom = event =>{
@@ -21,7 +24,7 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
-            navigate(froms, replace)
+            navigate(From)
         })
         .catch(error =>{
             console.log(error.message);
@@ -65,7 +68,7 @@ const Login = () => {
           </div>
           <div className='space-y-3'>
             <p>You can also login with</p>
-            <button onClick={handleGoogleLogin} className='bg-green-700 p-3 rounded-lg text-white'>Google</button>
+            <button onClick={handleGoogleLogin} className='bg-green-700 p-3 rounded-lg text-white flex items-center gap-2'><FaGoogle/> Google</button>
           </div>
           <p>New at Toy-Center ? <Link className='btn-link' to="/signUp">Sign Up</Link></p>
           <button

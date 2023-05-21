@@ -1,8 +1,11 @@
 import React from 'react';
 import Lottie from "lottie-react";
-import robot from "../../assets/Animation/131315-bot-robot.json"
+import robot from "../../../public/Animation/131315-bot-robot.json"
+import UseTitle from '../../Extra/UseTitle';
+
 
 const Banner = () => {
+  
     return (
         <div className='bg-gradient-to-r from-pink-300 to-teal-400 flex justify-between items-center text-white p-2'>
             <div className='w-1/2 mx-auto space-y-5'>

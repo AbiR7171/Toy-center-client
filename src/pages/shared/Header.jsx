@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import logo from "../../assets/Logo/Screenshot_1.png"
 
+
 const Header = () => {
   const {user, handleLogOut}= useContext(AuthContext)
+  
     return (
         <div className=' bg-gradient-to-r from-pink-300 to-teal-400'>
             <div className="navbar container mx-auto  text-white rounded-lg bg-opacity-85 p-4 font-serif">
@@ -15,7 +17,15 @@ const Header = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/login">Login</Link></li>
+      {
+        user ? <div className='flex items-center space-x-4'>
+          <li><button onClick={handleLogOut}>Logout</button></li>
+          <li><Link to="/showall">Show All Toys</Link></li>
+          <li><Link to="/addtoy">Add A Toy</Link></li>
+          <li><Link to="/mytoys">My Toys</Link></li>
+        </div> :
+        <li><Link to="/login">Login</Link></li>
+      }
       </ul>
     </div>
     <img src={logo} className='w-10 rounded-2xl' alt="" />
@@ -30,9 +40,11 @@ const Header = () => {
           <li><Link to="/showall">Show All Toys</Link></li>
           <li><Link to="/addtoy">Add A Toy</Link></li>
           <li><Link to="/mytoys">My Toys</Link></li>
+          <li> <Link to="/blog"> Blog</Link></li>
         </div> :
         <li><Link to="/login">Login</Link></li>
       }
+      
     </ul>
   </div>
   <div className="navbar-end">

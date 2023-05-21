@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Hind&family=Satisfy&family=Smokum&display=swap');
 
 
+body, html{
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-x:hidden;
+    -moz-overflow-x:hidden;
+    -o-overflow-x:hidden;
+    -ms-overflow-x:hidden;
+}
+
 body{
     font-family: serif;
 }
