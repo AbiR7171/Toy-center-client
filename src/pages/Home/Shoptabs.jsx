@@ -28,7 +28,7 @@ const Shoptabs = () => {
     const turbo = toys.filter(toy => toy.category === "turbo")
     setTurbos(turbo);
 
-    const sirgil = toys.filter(toy => toy.category === "sirgil ")
+    const sirgil = toys.filter(toy => toy.category === "sirgil")
     setSirgils(sirgil);
   },[toys])
     
