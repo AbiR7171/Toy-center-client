@@ -1,10 +1,10 @@
 import React from 'react';
-import pic1 from "../../../public/Pic/blue-cyborg-toy-dances-with-futuristic-joy-generated-by-ai.jpg";
-import pic2 from "../../../public/Pic/pair-robots-conflict (1).jpg"
-import pic3 from "../../../public/Pic/pair-robots-conflict.jpg"
-import pic4 from "../../../public/Pic/robo-advisor-chatbot-robotic-concept-robot-finger-point-laptop-button-generative-ai.jpg"
-import pic5 from "../../../public/Pic/robot-with-final-piece-jigsaw-puzzle.jpg"
-import pic6 from "../../../public/Pic/robo-advisor-chatbot-robotic-concept-robot-finger-point-laptop-button-generative-ai.jpg"
+import pic1 from "../../assets/Pic/blue-cyborg-toy-dances-with-futuristic-joy-generated-by-ai.jpg";
+import pic2 from "../../assets/Pic/pair-robots-conflict (1).jpg"
+import pic3 from "../../assets/Pic/pair-robots-conflict.jpg"
+import pic4 from "../../assets/Pic/robo-advisor-chatbot-robotic-concept-robot-finger-point-laptop-button-generative-ai.jpg"
+import pic5 from "../../assets/Pic/robot-with-final-piece-jigsaw-puzzle.jpg"
+import pic6 from "../../assets/Pic/robo-advisor-chatbot-robotic-concept-robot-finger-point-laptop-button-generative-ai.jpg"
 
 const Gallery = () => {
     return (

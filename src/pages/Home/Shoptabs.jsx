@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Turbo from '../Toys/Category/Turbo';
 import Remote from '../Toys/Category/Remote';
 import Sirgil from '../Toys/Category/Sirgil';
@@ -34,7 +33,7 @@ const Shoptabs = () => {
   },[toys])
     
     return (
-        <div className='mt-10 container mx-auto  p-2 mx-auto'>
+        <div className='mt-10 container mx-auto  p-2 '>
             <h1 className="text-5xl text-center mb-10">Buy Your Toy</h1>
            <div className='font-serif'>
            <Tabs>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from "lottie-react";
-import robot from "../../../public/Animation/131315-bot-robot.json"
+import robot from "../../assets/Animation/131315-bot-robot.json"
 import UseTitle from '../../Extra/UseTitle';
 
 

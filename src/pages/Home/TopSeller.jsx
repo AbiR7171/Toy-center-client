@@ -1,8 +1,8 @@
 import React from 'react';
-import seller1 from "../../../public/TopSeller/seller1.jpg"
-import seller2 from "../../../public/TopSeller/seller2.jpg"
-import seller3 from "../../../public/TopSeller/seller3.jpg"
-import seller4 from "../../../public/TopSeller/sellr4.jpg"
+import seller1 from "../../assets/TopSeller/seller1.jpg"
+import seller2 from "../../assets/TopSeller/seller2.jpg"
+import seller3 from "../../assets/TopSeller/seller3.jpg"
+import seller4 from "../../assets/TopSeller/sellr4.jpg"
 
 const TopSeller = () => {
     return (

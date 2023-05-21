@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import logo from "../../../public/Logo/Screenshot_1.png"
+import logo from "../../assets/Logo/Screenshot_1.png"
 
 
 const Header = () => {

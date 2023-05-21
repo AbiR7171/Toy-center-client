@@ -1,8 +1,8 @@
 import React from 'react';
-import offer from "../../../public/Offer/Special announcement vector 2.jpg"
-import robot from "../../../public/Offer/Ai.png"
-import ready from "../../../public/Offer/neon-are-you-ready-message-sign.jpg"
-import launch from "../../../public/Offer/Screenshot_1.png"
+import offer from "../../assets/Offer/Special announcement vector 2.jpg"
+import robot from "../../assets/Offer/Ai.png"
+import ready from "../../assets/Offer/neon-are-you-ready-message-sign.jpg"
+import launch from "../../assets/Offer/Screenshot_1.png"
 const Offer = () => {
     return (
         <div className='mt-10'>
