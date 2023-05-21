@@ -38,7 +38,7 @@ const ShowAll = () => {
             type="submit"
             className="w-1/3 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition-colors duration-300"
           >
-            Register
+            Search
           </button>
           </form>
              <div className="overflow-x-auto">
