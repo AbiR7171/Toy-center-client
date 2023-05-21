@@ -1,5 +1,7 @@
 import React from 'react';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import { FaStar, FaStarHalfAlt,FaRegStar  } from "react-icons/fa";
 
 const Remote = ({remote}) => {
     const {imageUrl,toyName,name,email,category,price,quantity, rating , _id }= remote;
@@ -12,7 +14,13 @@ const Remote = ({remote}) => {
       {toyName}
       <div className="badge badge-secondary"> ${price}</div>
     </h2>
-    <p>{rating}</p>
+    <p><Rating
+    className='text-yellow-400'
+  placeholderRating={rating}
+  emptySymbol={<FaRegStar/>}
+  placeholderSymbol={<FaStar/>}
+  fullSymbol={<FaStarHalfAlt/>}
+/></p>
     <div className="card-actions justify-start">
       <Link to={`/toy/${_id}`}><button className='bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-lg font-bold '>viewDeatiels</button></Link>
     </div>
