@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import UseTitle from '../../Extra/UseTitle';
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
@@ -10,7 +9,6 @@ const Login = () => {
     const location = useLocation()
     const navigate = useNavigate()
     console.log(location);
-     UseTitle("Login")
     const From = location.state?.from?.pathname || "/";
 
 
