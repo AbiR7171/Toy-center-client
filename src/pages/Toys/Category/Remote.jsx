@@ -7,7 +7,7 @@ const Remote = ({remote}) => {
     const {imageUrl,toyName,name,email,category,price,quantity, rating , _id }= remote;
     return (
         <div >
-             <div className="card w-96  bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-xl font-serif">
+             <div data-aos="fade-left" data-aos-duration="1000" className="card w-96  bg-gradient-to-r from-pink-300 to-teal-400 p-3 rounded-lg text-white shadow-xl font-serif hover:scale-110 duration-200">
   <figure><img src={imageUrl} className='rounded h-80 w-full' alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">

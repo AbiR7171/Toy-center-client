@@ -12,22 +12,22 @@ const Gallery = () => {
         <h1 className="text-7xl text-center mt-5 mb-10">Our Gallery</h1>
          <div className='container mx-auto mt-10 grid lg:grid-cols-3 gap-2 '>
             <div>
-                <img src={pic1} className='rounded h-72 hover:scale-125 p-2' alt="" />
+                <img data-aos="fade-down-right" data-aos-duration="1000" src={pic1} className='rounded h-72 hover:scale-125 p-2' alt="" />
             </div>
             <div>
-                <img src={pic2} className='rounded h-72 hover:scale-125 duration-75 p-2' alt="" />
+                <img data-aos="fade-down" data-aos-duration="1000" src={pic2} className='rounded h-72 hover:scale-125 duration-75 p-2' alt="" />
             </div>
             <div>
-                <img src={pic3} className='rounded h-72 hover:scale-125 duration-75 p-2' alt="" />
+                <img data-aos="fade-down-left" data-aos-duration="1000" src={pic3} className='rounded h-72 hover:scale-125 duration-75 p-2' alt="" />
             </div>
             <div>
-                <img src={pic4} className='rounded h-72  hover:scale-125 duration-75 p-2' alt="" />
+                <img data-aos="fade-up-right" data-aos-duration="1000" src={pic4} className='rounded h-72  hover:scale-125 duration-75 p-2' alt="" />
             </div>
             <div>
-                <img src={pic5} className='rounded h-72  hover:scale-125 duration-75 p-2' alt="" />
+                <img data-aos="fade-up" data-aos-duration="1000" src={pic5} className='rounded h-72  hover:scale-125 duration-75 p-2' alt="" />
             </div>
             <div>
-                <img src={pic6} className='rounded h-72  hover:scale-125 duration-75 p-2' alt="" />
+                <img data-aos="fade-up-left" data-aos-duration="1000" src={pic6} className='rounded h-72  hover:scale-125 duration-75 p-2' alt="" />
             </div>
         </div>
        </div>

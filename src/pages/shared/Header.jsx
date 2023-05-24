@@ -34,11 +34,11 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to="/">Home</Link></li>
+      <li><Link to="/showall">Show All Toys</Link></li>
+          <li><Link to="/addtoy">Add A Toy</Link></li>
       {
         user ? <div className='flex items-center space-x-4'>
           <li><button onClick={handleLogOut}>Logout</button></li>
-          <li><Link to="/showall">Show All Toys</Link></li>
-          <li><Link to="/addtoy">Add A Toy</Link></li>
           <li><Link to="/mytoys">My Toys</Link></li>
           <li> <Link to="/blog"> Blog</Link></li>
         </div> :

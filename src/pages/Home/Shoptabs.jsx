@@ -33,9 +33,9 @@ const Shoptabs = () => {
   },[toys])
     
     return (
-        <div className='mt-10 container mx-auto  p-2 '>
+        <div data-aos="fade-up-right" className='mt-10 container mx-auto  p-2 '>
             <h1 className="text-5xl text-center mb-10">Buy Your Toy</h1>
-           <div className='font-serif'>
+           <div  className='font-serif p-4'>
            <Tabs>
     <TabList>
       <Tab>TURBO ROBOT</Tab>
